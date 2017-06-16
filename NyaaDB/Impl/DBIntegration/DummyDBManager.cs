@@ -18,7 +18,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -29,7 +29,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -40,7 +40,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -51,7 +51,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -62,7 +62,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -73,7 +73,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -84,7 +84,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -95,7 +95,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -106,7 +106,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -117,7 +117,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -128,7 +128,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -139,7 +139,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -150,7 +150,7 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
@@ -161,13 +161,57 @@ namespace NyaaDB.Impl.DBIntegration
                 {
                     Category = 1,
                     Description = "",
-                    FileSize = 2312312312,
+                    FileSize = "2312312312",
                     Id = 1,
                     SubCategory = 2,
                     TorrentHash = "239021831290381203182381203",
                     TorrentName = "TestName",
                     UploadDate = DateTime.Now
-                }
+                },
+                new NyaaTorrent()
+                {
+                    Category = 1,
+                    Description = "",
+                    FileSize = "2312312312",
+                    Id = 1,
+                    SubCategory = 2,
+                    TorrentHash = "239021831290381203182381203",
+                    TorrentName = "TestName",
+                    UploadDate = DateTime.Now
+                },
+                new NyaaTorrent()
+                {
+                    Category = 1,
+                    Description = "",
+                    FileSize = "2312312312",
+                    Id = 1,
+                    SubCategory = 2,
+                    TorrentHash = "239021831290381203182381203",
+                    TorrentName = "TestName",
+                    UploadDate = DateTime.Now
+                },
+                new NyaaTorrent()
+                {
+                    Category = 1,
+                    Description = "",
+                    FileSize = "2312312312",
+                    Id = 1,
+                    SubCategory = 2,
+                    TorrentHash = "239021831290381203182381203",
+                    TorrentName = "TestName",
+                    UploadDate = DateTime.Now
+                },
+                new NyaaTorrent()
+                {
+                    Category = 1,
+                    Description = "",
+                    FileSize = "4234442",
+                    Id = 1,
+                    SubCategory = 2,
+                    TorrentHash = "239021831290381203182381203",
+                    TorrentName = "TestaaaaaName",
+                    UploadDate = DateTime.Now
+                },
             };
         }
     };

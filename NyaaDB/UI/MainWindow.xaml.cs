@@ -18,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using NyaaDB.Api.AnimeDB;
+using NyaaDB.ViewModel;
 
 namespace NyaaDB.UI
 {
@@ -26,8 +27,15 @@ namespace NyaaDB.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowViewModel _mainWindowViewModel;
         private readonly DefaultDBSettings _dbSettings;
         private readonly DBManager _dbManager;
+
+        MainWindowViewModel ViewModel
+        {
+            get { return _mainWindowViewModel; }
+            set { _mainWindowViewModel = value; DataContext = _mainWindowViewModel; }
+        }
 
         public MainWindow(DefaultDBSettings aDefaultDBSettings, DBManager aDefaultDBManager)
         {
@@ -36,23 +44,38 @@ namespace NyaaDB.UI
             _dbSettings = aDefaultDBSettings;
             _dbManager = aDefaultDBManager;
 
-            var b = new SubCategory();
-            b.SubCatType = SubCategoryType.ANIME_ENG;
+            ViewModel = new MainWindowViewModel();
+
             var s = new SearchSpecification()
             {
-                SearchCat = b,
+                SearchCat = new Category(),
                 SearchSortOrder = SortOrder.ASC,
                 SearchBy = "date"
             };
 
-            try
-            {
-                var r = _dbManager.SearchAnime("[horriblesubs] one piece", s);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No Database found.", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+
+
+            var res = _dbManager.SearchAnime("test", s);
+            res.ForEach(x => ViewModel.TorrentCollection.Add(new NyaaTorrentViewModel(x)));
+
+
+            //var b = new SubCategory();
+            //b.SubCatType = SubCategoryType.ANIME_ENG;
+            //var s = new SearchSpecification()
+            //{
+            //    SearchCat = b,
+            //    SearchSortOrder = SortOrder.ASC,
+            //    SearchBy = "date"
+            //};
+
+            //try
+            //{
+            //    var r = _dbManager.SearchAnime("[horriblesubs] one piece", s);
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("No Database found.", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
 
 
             //try

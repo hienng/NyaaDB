@@ -21,7 +21,7 @@ namespace NyaaDB.Util.DI
             container
 
                 // DBManager
-                .Register(Component.For<DBManager>().ImplementedBy<DefaultDBManager>())
+                .Register(Component.For<DBManager>().ImplementedBy<DummyDBManager>())
 
                 // Settings
                 .Register(Component.For<DefaultDBSettings>())

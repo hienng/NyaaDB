@@ -27,6 +27,48 @@
             <TextBox Height="25" Grid.Column="4" BorderBrush="Gray" BorderThickness="1"></TextBox>
             <Button Height="25" Grid.Column="5" Content="S"/>
         </Grid>
-        <contents:NyaaContents Grid.Row="1"/>
+        <!--<contents:NyaaContents Grid.Row="1" DataContext="View"/>-->
+        <Border BorderThickness="0" Margin="10" CornerRadius="10" Grid.Row="1">
+            <Border.BitmapEffect>
+                <DropShadowBitmapEffect Color="White"/>
+            </Border.BitmapEffect>
+            <Grid>
+                <Border x:Name="BDRounded" BorderThickness="0" CornerRadius="10" Background="LightSlateGray"/>
+                <DataGrid ItemsSource="{Binding TorrentCollection}" BorderBrush="{x:Null}" HeadersVisibility="Column" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False">
+                    <DataGrid.OpacityMask>
+                        <VisualBrush Visual="{Binding ElementName=BDRounded}"/>
+                    </DataGrid.OpacityMask>
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="MinHeight" Value="35"/>
+                            <Setter Property="Background" Value="LightGray"/>
+                            <Setter Property="BorderBrush" Value="Gray"/>
+                            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                            <Setter Property="SeparatorBrush" Value="Gold"/>
+                            <Setter Property="SeparatorVisibility" Value="Hidden"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Category" MinWidth="84" MaxWidth="84" CanUserReorder="False" CanUserSort="False" CanUserResize="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Category}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Name" Binding="{Binding TorrentName, Mode=OneWay}" Width="*" MinWidth="280" CanUserReorder="False" CanUserResize="False" CanUserSort="False"/>
+                        <DataGridTemplateColumn Header="DL" MinWidth="35" MaxWidth="35" CanUserReorder="False" CanUserResize="False" CanUserSort="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Size" Binding="{Binding FileSize, Converter={StaticResource FileSizeConverter}, Mode=OneWay}" MinWidth="60" MaxWidth="60" CanUserReorder="False" CanUserResize="False" CanUserSort="False" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

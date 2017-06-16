@@ -15,7 +15,7 @@ namespace NyaaDB.Api.AnimeDB
         public int Category { get; set; }
         public int SubCategory { get; set; }
         public DateTime UploadDate { get; set; }
-        public long FileSize { get; set; }
+        public string FileSize { get; set; }
         public string Description { get; set; }
     }
 }

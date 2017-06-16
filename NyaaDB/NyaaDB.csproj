@@ -98,12 +98,21 @@
     <Compile Include="Api\AnimeDB\CatType.cs" />
     <Compile Include="Api\AnimeDB\SubCategory.cs" />
     <Compile Include="Api\DBIntegration\SearchSpecification.cs" />
+    <Compile Include="Impl\DBIntegration\DummyDBManager.cs" />
     <Compile Include="UI\DBContents\NyaaContents.xaml.cs">
       <DependentUpon>NyaaContents.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Converters\FileSizeConverter.cs" />
     <Compile Include="Util\DI\Helper\DefaultLauncher.cs" />
     <Compile Include="Util\DI\Helper\Launcher.cs" />
     <Compile Include="Util\DI\Installer.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\NyaaTorrentViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Page Include="UI\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\DBContents\NyaaContents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

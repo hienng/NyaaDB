@@ -54,7 +54,7 @@ namespace NyaaDB.Impl.DBIntegration
                         Category = Convert.IsDBNull(dataRow["category"]) ? 0 : Convert.ToInt32(dataRow["category"]),
                         SubCategory = Convert.IsDBNull(dataRow["sub_category"]) ? 0 : Convert.ToInt32(dataRow["sub_category"]),
                         UploadDate = Convert.IsDBNull(dataRow["date"]) ? new DateTime() : Convert.ToDateTime(dataRow["date"]),
-                        FileSize = Convert.IsDBNull(dataRow["filesize"]) ? 0 : Convert.ToInt64(dataRow["filesize"]),
+                        FileSize = Convert.IsDBNull(dataRow["filesize"]) ? string.Empty : Convert.ToString(dataRow["filesize"]),
                         Description = Convert.IsDBNull(dataRow["description"]) ? string.Empty : Convert.ToString(dataRow["description"])
                     };
 
