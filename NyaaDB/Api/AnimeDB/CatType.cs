@@ -9,4 +9,6 @@ namespace NyaaDB.Api.AnimeDB
     public interface CatType
     {
     }
+
+    public class AllCategories : CatType { }
 }

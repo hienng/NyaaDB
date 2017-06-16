@@ -65,7 +65,7 @@ namespace NyaaDB.Impl.DBIntegration
                     continue;
                 }
             }
-
+            resultData.Dispose();
             return resultList;
         }
 

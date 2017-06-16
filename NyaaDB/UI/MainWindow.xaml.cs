@@ -49,44 +49,16 @@ namespace NyaaDB.UI
 
             var s = new SearchSpecification()
             {
-                SearchCat = new Category(),
-                SearchSortOrder = SortOrder.ASC,
+                SearchSortOrder = SortOrder.DESC,
                 SearchBy = "date"
             };
 
 
 
-            var res = _dbManager.SearchAnime("test", s);
+            var res = _dbManager.SearchAnime("", s);
             res.ForEach(x => ViewModel.TorrentCollection.Add(new NyaaTorrentViewModel(x)));
 
-
-            //var b = new SubCategory();
-            //b.SubCatType = SubCategoryType.ANIME_ENG;
-            //var s = new SearchSpecification()
-            //{
-            //    SearchCat = b,
-            //    SearchSortOrder = SortOrder.ASC,
-            //    SearchBy = "date"
-            //};
-
-            //try
-            //{
-            //    var r = _dbManager.SearchAnime("[horriblesubs] one piece", s);
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("No Database found.", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
-
-
-            //try
-            //{
-            //    Process.Start("magnet:?xt=urn:btih:" + res.First().TorrentHash);
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("No Torrent Client detected", "Local Torrent Client Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
+            res.Clear();
         }
 
         private void MagnetButton_ClickEvent(object sender, RoutedEventArgs e)

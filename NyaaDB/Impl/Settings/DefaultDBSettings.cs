@@ -10,7 +10,7 @@ namespace NyaaDB.Impl.Settings
 {
     public class DefaultDBSettings : DBSettings
     {
-        private string _dbFilePath = @"E:\\nyaadb.sqlite3";
+        private string _dbFilePath = @".\nyaadb.sqlite3";
         private SQLiteConnectionStringBuilder _connectionStringBuilder = new SQLiteConnectionStringBuilder();
 
         public string DBFilePath

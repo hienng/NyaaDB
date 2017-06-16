@@ -10,7 +10,12 @@ namespace NyaaDB.Api.DBIntegration
     public enum SortOrder { ASC = 0, DESC = 1 }
     public class SearchSpecification
     {
-        public CatType SearchCat { get; set; }
+        private CatType _searchCat = new AllCategories();
+        public CatType SearchCat
+        {
+            get { return _searchCat; }
+            set { _searchCat = value; }
+        }
 
         public string SearchBy { get; set; }
         public SortOrder SearchSortOrder { get; set; }
