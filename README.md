@@ -1,5 +1,7 @@
 # NyaaDB
  * WPF Application to browse the old Nyaa DB. 
+ 
+ !(http://i.imgur.com/JGdNxrm.png)
 
 ## [Roadmap](https://trello.com/b/5crIp6yD/nyaadb)
 
