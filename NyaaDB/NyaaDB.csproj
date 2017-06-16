@@ -107,12 +107,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Api\AnimeDB\Anime.cs" />
     <Compile Include="Api\AnimeDB\MagnetLink.cs" />
-    <Compile Include="Api\AnimeDB\MALDescription.cs" />
     <Compile Include="Api\DBIntegration\DBManager.cs" />
-    <Compile Include="Api\AnimeInfoDBIntegration\MALInformation.cs" />
-    <Compile Include="Api\DBIntegration\NyaaTorrent.cs" />
+    <Compile Include="Api\AnimeDB\NyaaTorrent.cs" />
     <Compile Include="Api\Settings\DBSettings.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -157,7 +154,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Impl\AnimeInfoDBIntegration\" />
     <Folder Include="Resources\Logos\" />
   </ItemGroup>
   <ItemGroup>
