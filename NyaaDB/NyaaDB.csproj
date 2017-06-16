@@ -99,6 +99,7 @@
     <Compile Include="Api\AnimeDB\SubCategory.cs" />
     <Compile Include="Api\DBIntegration\SearchSpecification.cs" />
     <Compile Include="Impl\DBIntegration\DummyDBManager.cs" />
+    <Compile Include="UI\Converters\CategoryToImageConverter.cs" />
     <Compile Include="UI\DBContents\NyaaContents.xaml.cs">
       <DependentUpon>NyaaContents.xaml</DependentUpon>
     </Compile>

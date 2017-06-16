@@ -3,4 +3,5 @@
                     xmlns:local="clr-namespace:NyaaDB.UI"
                     xmlns:converters="clr-namespace:NyaaDB.UI.Converters">
     <converters:FileSizeConverter x:Key="FileSizeConverter"/>
+    <converters:CategoryToImageConverter x:Key="CategoryToImageConverter"/>
 </ResourceDictionary>

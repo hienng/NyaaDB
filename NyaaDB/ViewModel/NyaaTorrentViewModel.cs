@@ -30,5 +30,10 @@ namespace NyaaDB.ViewModel
         {
             get { return _nyaaTorrent.FileSize; }
         }
+
+        public string SubCategory
+        {
+            get { return _nyaaTorrent.SubCategory.ToString(); }
+        }
     }
 }

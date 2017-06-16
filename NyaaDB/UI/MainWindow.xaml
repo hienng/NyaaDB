@@ -53,7 +53,7 @@
                         <DataGridTemplateColumn Header="Category" MinWidth="84" MaxWidth="84" CanUserReorder="False" CanUserSort="False" CanUserResize="False">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Image Source="{Binding Category}"/>
+                                    <Image Source="{Binding SubCategory, Converter={StaticResource CategoryToImageConverter}}"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
