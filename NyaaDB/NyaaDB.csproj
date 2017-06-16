@@ -94,6 +94,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Api\AnimeDB\Category.cs" />
+    <Compile Include="Api\AnimeDB\CatType.cs" />
+    <Compile Include="Api\AnimeDB\SubCategory.cs" />
+    <Compile Include="Api\DBIntegration\SearchSpecification.cs" />
     <Compile Include="UI\DBContents\NyaaContents.xaml.cs">
       <DependentUpon>NyaaContents.xaml</DependentUpon>
     </Compile>

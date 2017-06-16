@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NyaaDB.Api.AnimeDB;
 
 namespace NyaaDB.UI
 {
@@ -35,9 +36,18 @@ namespace NyaaDB.UI
             _dbSettings = aDefaultDBSettings;
             _dbManager = aDefaultDBManager;
 
+            var b = new SubCategory();
+            b.SubCatType = SubCategoryType.ANIME_ENG;
+            var s = new SearchSpecification()
+            {
+                SearchCat = b,
+                SearchSortOrder = SortOrder.ASC,
+                SearchBy = "date "
+            };
+
             try
             {
-                var r = _dbManager.SearchAnime("one piece");
+                var r = _dbManager.SearchAnime("[horriblesubs] one piece", s);
             }
             catch (Exception)
             {
