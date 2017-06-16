@@ -2,6 +2,7 @@
 using NyaaDB.Impl.Settings;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NyaaDB
+namespace NyaaDB.UI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,6 +29,14 @@ namespace NyaaDB
 
             var settings = new DBSettings();
             var res = new DefaultDBManager(settings).SearchAnime("one piece");
+            //try
+            //{
+            //    Process.Start("magnet:?xt=urn:btih:" + res.First().TorrentHash);
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("No Torrent Client detected", "Local Torrent Client Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
         }
     }
 }
