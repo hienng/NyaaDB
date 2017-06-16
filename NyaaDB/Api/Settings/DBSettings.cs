@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NyaaDB.UI.Api.Settings
+namespace NyaaDB.Api.Settings
 {
     public interface DBSettings
     {

@@ -1,7 +1,7 @@
 ﻿using NyaaDB.Api.DBIntegration;
 using NyaaDB.Impl.DBIntegration;
 using NyaaDB.Impl.Settings;
-using NyaaDB.UI.Api.Settings;
+using NyaaDB.Api.Settings;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

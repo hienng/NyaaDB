@@ -1,4 +1,4 @@
-﻿using NyaaDB.UI.Api.Settings;
+﻿using NyaaDB.Api.Settings;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;

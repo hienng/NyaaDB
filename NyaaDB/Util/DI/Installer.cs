@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using NyaaDB.UI.Util.DI.Helper;
-using NyaaDB.UI.Api.Settings;
 using NyaaDB.Impl.Settings;
 using NyaaDB.Api.DBIntegration;
 using NyaaDB.Impl.DBIntegration;
+using NyaaDB.UI;
 
-namespace NyaaDB.UI.Util.DI
+namespace NyaaDB.Util.DI
 {
     public class Installer : IWindsorInstaller
     {
