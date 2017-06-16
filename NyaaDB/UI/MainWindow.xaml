@@ -6,6 +6,33 @@
         xmlns:contents="clr-namespace:NyaaDB.UI.DBContents"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="450" MinWidth="750" Height="450" Width="750" Background="WhiteSmoke">
+    <Window.Resources>
+        <Style x:Key="MagnetButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="Chrome" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                                <Setter Property="Opacity" TargetName="Chrome" Value="0.5"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ADADAD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" MaxHeight="70"/>
@@ -53,7 +80,7 @@
                         <DataGridTemplateColumn Header="Category" MinWidth="84" MaxWidth="84" CanUserReorder="False" CanUserSort="False" CanUserResize="False">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Image Source="{Binding SubCategory, Converter={StaticResource CategoryToImageConverter}}"/>
+                                    <Image Source="{Binding SubCategory, Converter={StaticResource CategoryToImageConverter}}" Margin="1"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
@@ -61,7 +88,9 @@
                         <DataGridTemplateColumn Header="DL" MinWidth="35" MaxWidth="35" CanUserReorder="False" CanUserResize="False" CanUserSort="False">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Image />
+                                    <Button Margin="1" Width="20" Height="20" Style="{DynamicResource MagnetButton}" Click="MagnetButton_ClickEvent">
+                                        <Image Source="{StaticResource MagnetImg}" />
+                                    </Button>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>

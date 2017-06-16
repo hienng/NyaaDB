@@ -35,5 +35,10 @@ namespace NyaaDB.ViewModel
         {
             get { return _nyaaTorrent.SubCategory.ToString(); }
         }
+
+        public string TorrentHash
+        {
+            get { return _nyaaTorrent.TorrentHash; }
+        }
     }
 }

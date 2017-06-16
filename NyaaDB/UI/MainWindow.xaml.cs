@@ -30,6 +30,7 @@ namespace NyaaDB.UI
         private MainWindowViewModel _mainWindowViewModel;
         private readonly DefaultDBSettings _dbSettings;
         private readonly DBManager _dbManager;
+        private const string _magnetPrefix = @"magnet:?xt=urn:btih:";
 
         MainWindowViewModel ViewModel
         {
@@ -86,6 +87,21 @@ namespace NyaaDB.UI
             //{
             //    MessageBox.Show("No Torrent Client detected", "Local Torrent Client Error", MessageBoxButton.OK, MessageBoxImage.Error);
             //}
+        }
+
+        private void MagnetButton_ClickEvent(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var dc = ((Button)sender).DataContext as NyaaTorrentViewModel;
+                Process.Start(_magnetPrefix + dc.TorrentHash);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+
         }
     }
 }
