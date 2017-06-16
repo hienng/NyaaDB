@@ -1,5 +1,6 @@
 ﻿using NyaaDB.Impl.DBIntegration;
 using NyaaDB.Impl.Settings;
+using NyaaDB.UI.Api.Settings;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,12 +24,15 @@ namespace NyaaDB.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private DefaultDBSettings _dbSettings;
+
+        public MainWindow(DefaultDBSettings aDefaultDBSettings)
         {
             InitializeComponent();
 
-            var settings = new DefaultDBSettings();
-            var res = new DefaultDBManager(settings).SearchAnime("one piece");
+            _dbSettings = aDefaultDBSettings;
+
+            var res = new DefaultDBManager(_dbSettings).SearchAnime("one piece");
             //try
             //{
             //    Process.Start("magnet:?xt=urn:btih:" + res.First().TorrentHash);

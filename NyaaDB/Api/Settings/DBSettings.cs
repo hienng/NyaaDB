@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NyaaDB.UI.Api.Settings
 {
-    public abstract class DBSettings
+    public interface DBSettings
     {
     }
 }
