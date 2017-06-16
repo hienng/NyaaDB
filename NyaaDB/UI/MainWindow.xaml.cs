@@ -35,7 +35,15 @@ namespace NyaaDB.UI
             _dbSettings = aDefaultDBSettings;
             _dbManager = aDefaultDBManager;
 
-            var r = _dbManager.SearchAnime("one piece");
+            try
+            {
+                var r = _dbManager.SearchAnime("one piece");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No Database found.", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
 
             //try
             //{
