@@ -42,7 +42,7 @@ namespace NyaaDB.UI
             {
                 SearchCat = b,
                 SearchSortOrder = SortOrder.ASC,
-                SearchBy = "date "
+                SearchBy = "date"
             };
 
             try
