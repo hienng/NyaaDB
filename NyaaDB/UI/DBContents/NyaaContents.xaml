@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="NyaaDB.UI.DBContents.NyaaContents"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="750">
+    <Grid>
+        <Border BorderThickness="0" Margin="10" CornerRadius="10">
+            <Border.BitmapEffect>
+                <DropShadowBitmapEffect Color="White"/>
+            </Border.BitmapEffect>
+            <Grid>
+                <Border x:Name="BDRounded" BorderThickness="0" CornerRadius="10" Background="LightSlateGray"/>
+                <DataGrid ItemsSource="{Binding DBContent}" BorderBrush="{x:Null}" HeadersVisibility="Column" VerticalScrollBarVisibility="Visible">
+                    <DataGrid.OpacityMask>
+                        <VisualBrush Visual="{Binding ElementName=BDRounded}"/>
+                    </DataGrid.OpacityMask>
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="MinHeight" Value="35"/>
+                            <Setter Property="Background" Value="LightGray"/>
+                            <Setter Property="BorderBrush" Value="Gray"/>
+                            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                            <Setter Property="SeparatorBrush" Value="Gold"/>
+                            <Setter Property="SeparatorVisibility" Value="Hidden"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Category" MinWidth="84" MaxWidth="84" CanUserReorder="False" CanUserSort="False" CanUserResize="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Category}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridHyperlinkColumn Header="Name" Width="*" MinWidth="280" CanUserReorder="False" CanUserResize="False" CanUserSort="False"/>
+                        <DataGridTemplateColumn Header="DL" MinWidth="35" MaxWidth="35" CanUserReorder="False" CanUserResize="False" CanUserSort="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Size" MinWidth="60" MaxWidth="60" CanUserReorder="False" CanUserResize="False" CanUserSort="False" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

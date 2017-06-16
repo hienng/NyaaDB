@@ -37,7 +37,7 @@ namespace NyaaDB.UI
 
             try
             {
-                var r = _dbManager.SearchAnime("one piece");
+                //var r = _dbManager.SearchAnime("one piece");
             }
             catch (Exception)
             {

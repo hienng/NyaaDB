@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{23A7AC1B-485B-447E-B235-E812F0810192}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NyaaDB.UI</RootNamespace>
+    <RootNamespace>NyaaDB</RootNamespace>
     <AssemblyName>NyaaDB</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -15,6 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -93,9 +93,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UI\DBContents\NyaaContents.xaml.cs">
+      <DependentUpon>NyaaContents.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\DI\Helper\DefaultLauncher.cs" />
     <Compile Include="Util\DI\Helper\Launcher.cs" />
     <Compile Include="Util\DI\Installer.cs" />
+    <Page Include="UI\DBContents\NyaaContents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,6 +124,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UI\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -147,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Impl\AnimeInfoDBIntegration\" />
-    <Folder Include="UI\DBContents\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -160,6 +170,36 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Categories\magnetIcon.png" />
+    <Resource Include="Resources\Categories\sukebei-25.png" />
+    <Resource Include="Resources\Categories\sukebei-26.png" />
+    <Resource Include="Resources\Categories\sukebei-27.png" />
+    <Resource Include="Resources\Categories\sukebei-28.png" />
+    <Resource Include="Resources\Categories\sukebei-30.png" />
+    <Resource Include="Resources\Categories\sukebei-31.png" />
+    <Resource Include="Resources\Categories\sukebei-33.png" />
+    <Resource Include="Resources\Categories\www-11.png" />
+    <Resource Include="Resources\Categories\www-12.png" />
+    <Resource Include="Resources\Categories\www-13.png" />
+    <Resource Include="Resources\Categories\www-14.png" />
+    <Resource Include="Resources\Categories\www-15.png" />
+    <Resource Include="Resources\Categories\www-17.png" />
+    <Resource Include="Resources\Categories\www-18.png" />
+    <Resource Include="Resources\Categories\www-19.png" />
+    <Resource Include="Resources\Categories\www-20.png" />
+    <Resource Include="Resources\Categories\www-21.png" />
+    <Resource Include="Resources\Categories\www-22.png" />
+    <Resource Include="Resources\Categories\www-23.png" />
+    <Resource Include="Resources\Categories\www-24.png" />
+    <Resource Include="Resources\Categories\www-32.png" />
+    <Resource Include="Resources\Categories\www-37.png" />
+    <Resource Include="Resources\Categories\www-38.png" />
+    <Resource Include="Resources\Categories\www-39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Logos\renlogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets')" />
