@@ -24,7 +24,7 @@ namespace NyaaDB.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private DefaultDBSettings _dbSettings;
+        private readonly DefaultDBSettings _dbSettings;
 
         public MainWindow(DefaultDBSettings aDefaultDBSettings)
         {
