@@ -27,7 +27,7 @@ namespace NyaaDB.UI
         {
             InitializeComponent();
 
-            var settings = new DBSettings();
+            var settings = new DefaultDBSettings();
             var res = new DefaultDBManager(settings).SearchAnime("one piece");
             //try
             //{

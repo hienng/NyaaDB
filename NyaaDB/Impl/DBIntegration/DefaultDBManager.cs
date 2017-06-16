@@ -15,10 +15,10 @@ namespace NyaaDB.Impl.DBIntegration
     {
         private const string searchQuery = @"SELECT * FROM torrents WHERE torrent_name like '%' || @animeTitle || '%'";
 
-        private DBSettings _dbSettings;
+        private DefaultDBSettings _dbSettings;
         private SQLiteConnection _sqliteConnection;
 
-        public DefaultDBManager(DBSettings aDBSettings)
+        public DefaultDBManager(DefaultDBSettings aDBSettings)
         {
             _dbSettings = aDBSettings;
             _sqliteConnection = new SQLiteConnection(_dbSettings.ConnectionString);
