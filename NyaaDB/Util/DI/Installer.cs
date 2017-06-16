@@ -9,6 +9,8 @@ using Castle.Windsor;
 using NyaaDB.UI.Util.DI.Helper;
 using NyaaDB.UI.Api.Settings;
 using NyaaDB.Impl.Settings;
+using NyaaDB.Api.DBIntegration;
+using NyaaDB.Impl.DBIntegration;
 
 namespace NyaaDB.UI.Util.DI
 {
@@ -17,6 +19,10 @@ namespace NyaaDB.UI.Util.DI
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container
+
+                // DBManager
+                .Register(Component.For<DBManager>().ImplementedBy<DefaultDBManager>())
+
                 // Settings
                 .Register(Component.For<DefaultDBSettings>())
 
